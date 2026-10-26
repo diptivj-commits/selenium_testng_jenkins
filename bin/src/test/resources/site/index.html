@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Jenkins Login Practice</title><style>body{font:18px Arial;background:#edf3f8;margin:40px}.card{background:white;padding:30px;max-width:440px;border-radius:12px}input,button{display:block;padding:10px;margin:12px 0}#message{min-height:30px}button[hidden]{display:none!important}</style></head><body><div class="card"><h1>Jenkins Login Practice</h1><p>Demo only: demo / DemoPassword123</p><form id="login-form"><label for="username">Username</label><input id="username" autocomplete="off"><label for="password">Password</label><input id="password" type="password"><button id="login" type="submit">Log in</button></form><p id="message" role="status"></p><button id="logout" hidden>Log out</button></div><script>
+document.getElementById('login-form').addEventListener('submit', function(event) {
+ event.preventDefault(); const user=document.getElementById('username').value; const pass=document.getElementById('password').value;
+ const ok=user==='demo'&&pass==='DemoPassword123';
+ document.getElementById('message').textContent=ok?'Login successful':'Invalid credentials';
+ document.getElementById('logout').hidden=!ok;
+});
+document.getElementById('logout').addEventListener('click',function(){document.getElementById('message').textContent='Logged out';this.hidden=true;document.getElementById('login-form').reset();});
+</script></body></html>

@@ -1,0 +1,2 @@
+Verified: Maven source compilation successful; 3 ConfigurationTest checks passed, including a real HTTP request to the local practice page; Surefire XML files match Jenkins publication pattern reports/testng/TEST-*.xml and TestNG HTML index was generated. Maven and TestNG XML parsed successfully.
+Not executed here: Chrome UI tests and Jenkins pipeline on a real Jenkins controller/agent. Jenkinsfile requires configured JDK21/Maven3 tools and an online selenium-labelled agent with Chrome.
